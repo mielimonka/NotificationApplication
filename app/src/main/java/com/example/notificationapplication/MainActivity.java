@@ -36,13 +36,16 @@ public class MainActivity extends AppCompatActivity {
 
         mDate = (TextView) findViewById(R.id.date);
 
-        //ToDO: set OnClick listener for mDate.
+        //ToDO: fill the OnClick listener for mDate.
         // In onCLick method create a DatePickerDialog object, try to figure out,
         // what variables will you need for the object to work.
         // Here's a little hint: at one point use android.R.style.Theme_Holo_Light_Dialog_MinWidth.
-
-        //your code
-
+        mDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //HERE :D
+            }
+        });
 
 
 
@@ -52,7 +55,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 //TODO: set EPOCH time for compareCalendar, use variables: year, moth, dayOfMonth
-                // compareCalendar......
+
+                // compareCalendar.set(.............);
 
                 //ToDO: create a showDate String. Try to figure out, what should it consist of.
                 // Uncomment the line below.
@@ -110,4 +114,5 @@ public class MainActivity extends AppCompatActivity {
 //        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 //        notificationManager.notify(notificationId,notificationBuilder.build());
 //    }
+    //TODO: uncomment calls for methods createNotificationChannel and sendNotification
 }
